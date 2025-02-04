@@ -1,16 +1,16 @@
 import { Controller, Get } from '@nestjs/common';
 import { CaiyaAgentService } from './caiya-agent.service';
 
-@Controller('caiya-agent')
+@Controller('filtered-news')
 export class CaiyaAgentController {
   constructor(private readonly caiyaAgentService: CaiyaAgentService) {}
 
-  @Get()
-  getData() {
-    return this.caiyaAgentService.getTrendingNews();
-  }
+  //   @Get()
+  //   getData() {
+  //     return this.caiyaAgentService.getTrendingNews();
+  //   }
 
-  @Get('filtered-news')
+  @Get()
   getParsedNews() {
     return this.caiyaAgentService.getParsedNews();
   }
