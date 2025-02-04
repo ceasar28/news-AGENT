@@ -171,7 +171,7 @@ Now, based on these rules, process the provided news content and return the summ
     }
   };
 
-  @Cron('*/3 * * * *')
+  @Cron('0 * * * *')
   async handleCron(): Promise<void> {
     console.log('running cron');
     await this.getTrendingNews();
